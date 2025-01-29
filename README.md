@@ -54,4 +54,5 @@ A visual tool to create custom branded buttons for your [LittleLink](https://git
 [Access the Button Builder](https://builder.littlelink.io) | Built for [LittleLink](https://github.com/sethcottle/littlelink)
 
 ---
-![CleanShot](https://github.com/user-attachments/assets/288de5ee-b719-4595-8920-f6dfadd88b86)
+![CleanShot](https://github.com/user-attachments/assets/d11a82fb-2000-4fc1-96f0-31c36fee42b6)
+
