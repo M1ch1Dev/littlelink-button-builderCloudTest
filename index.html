@@ -81,6 +81,15 @@
                 <label for="buttonText">Button Text</label>
                 <input type="text" id="buttonText" value="Button Text">
             </div>
+
+            <div class="form-group">
+                <label for="buttonURL">Button URL</label>
+                <input type="url" 
+                       id="buttonURL" 
+                       placeholder="https://example.com" 
+                       pattern="https?://.*"
+                       class="text-input">
+            </div>
             
             <div class="form-group">
                 <label>Background Color</label>
@@ -163,6 +172,7 @@
 
         const button = document.getElementById('previewButton');
         const buttonText = document.getElementById('buttonText');
+        const buttonURL = document.getElementById('buttonURL');
         const bgColor = document.getElementById('bgColor');
         const bgColorText = document.getElementById('bgColorText');
         const textColor = document.getElementById('textColor');
@@ -226,6 +236,7 @@
         function generateCode() {
             const buttonLabel = buttonText.value || 'Button Text';
             const className = buttonLabel.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            const url = buttonURL.value || '#';
             
             // Generate the CSS
             let css = `/* ${buttonLabel} */
@@ -239,9 +250,9 @@
             
             css += '\n}';
             
-            // Generate the HTML with aria-hidden
+            // Generate the HTML with aria-hidden and URL
             const html = `<!-- ${buttonLabel} -->
-<a class="button button-${className}" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/${uploadedFileName || 'default-icon.svg'}" alt="${buttonLabel} icon">${buttonLabel}</a>`;
+<a class="button button-${className}" href="${url}" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/${uploadedFileName || 'default-icon.svg'}" alt="${buttonLabel} icon">${buttonLabel}</a>`;
 
             // Display code based on current tab
             codeOutput.textContent = currentTab === 'css' ? css : html;
@@ -273,6 +284,7 @@
         function updateButton() {
             button.style.backgroundColor = bgColor.value;
             button.style.color = textColor.value;
+            button.href = buttonURL.value || '#';
             button.querySelector('span').textContent = buttonText.value;
             generateCode();
         }
@@ -293,6 +305,7 @@
         });
 
         strokeSelect.addEventListener('change', updateButton);
+        buttonURL.addEventListener('input', updateButton);
 
         document.querySelectorAll('.code-tab').forEach(tab => {
             tab.addEventListener('click', () => {

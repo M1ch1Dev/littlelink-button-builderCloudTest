@@ -143,6 +143,20 @@ select.stroke-select {
     color: var(--text-color);
 }
 
+input[type="text"],
+input[type="color"],
+input[type="url"],
+.text-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-family: "Open Sans", system-ui;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
 .color-input-group {
     display: flex;
     gap: 1rem;
