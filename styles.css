@@ -283,7 +283,7 @@ input[type="url"] {
 
 .code-tab {
     padding: 0.5rem 1rem;
-    background: var(--preview-bg);
+    background: var(--bg-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
