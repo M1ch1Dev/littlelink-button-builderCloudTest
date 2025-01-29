@@ -327,20 +327,42 @@ input[type="url"] {
 }
 
 .copy-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: .90rem;
     background: #4a5568;
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    font-family: "Open Sans", system-ui;
     font-weight: 600;
-    width: 100%;
+    text-align: center;
+    font-family: "Open Sans", system-ui;
 }
 
 .copy-button:hover {
     background: #2d3748;
 }
+
+/* Extra Styles */
+
+/* Theme-specific link colors */
+:root.theme-dark p a {
+    color: #4899F7;
+}
+
+:root.theme-dark p a:hover {
+    color: #7AB8FF; 
+}
+
+:root.theme-light p a {
+    color: #2457F5; 
+}
+
+:root.theme-light p a:hover {
+    color: #083BDA;
+}
+
 
 /* LittleLink Button Preview Styles */
 .button {
