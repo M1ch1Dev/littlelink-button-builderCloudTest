@@ -32,11 +32,11 @@ A visual tool to create custom branded buttons for your [LittleLink](https://git
 
 2. **Check Accessibility**
    - Review contrast scores
-   - Apply suggested strokes if needed
+   - Automatically applies strokes if needed
    - Test visibility in both themes
 
 3. **Add to LittleLink**
-   - Copy the generated CSS code to `brands.css`
+   - Copy the generated CSS code to `css/brands.css`
    - Copy the generated HTML code to `index.html`
    - Add your icon file to `images/icons` folder
 
